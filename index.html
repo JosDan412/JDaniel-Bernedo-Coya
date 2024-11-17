@@ -3,13 +3,27 @@
 <html>
 <html lang="en">
 <head>
+	<script src="contenido_oculto.js"></script>
+	<script src="bloqueo.js"></script>
+	
 	<title>Jose Daniel Bernedo Coya</title>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		
 
+		
 		.bloque_arriba
+		{
+			display: flex;
+			background-color: #000000;
+			margin: 0px;
+			height: 84px;
+			justify-content: space-between;
+		}
+
+
+		.bloque_arriba_letras
 		{
 			display: flex;
 			align-items: center;
@@ -35,12 +49,12 @@
 		{
 			display: flex;
 			align-items: center;
-			height: 410px;
+			height: 400px;
 			background-color: #000000;
 			color: #FFFFFF;
 			position: relative;
 			justify-content: space-between;
-      			padding: 30px 400px;
+      			padding: 30px 370px;
 		}
 
 		.mover_derecha75
@@ -65,18 +79,35 @@
    			text-align: center;
 			transition: background-color 0.3s;
     			font-size: 20px;
-			margin: 80px;
+			margin: 0px;
+		}
+		
+		.bloque_arriba_imagen
+		{
+			margin-left: 40px;
+			display: grid;
+			background-color: black;
+			transition: background-color 0.3s;
+			margin: 0px;
+			place-items: center;
+			width: 230px;
+      			height: 84px;
 		}
 
 		.bloque_letras_arriba:hover
 		{
-			background-color: gray;
+			background-color: #8D8D8D;
 		}
 
-		.mover_ambos_lados30
+		.bloque_arriba_imagen:hover
 		{
-			margin-left: 30px;
-			margin-right: 30px;
+			background-color: #8D8D8D;
+		}
+
+		.mover_ambos_lados40
+		{
+			margin-left: 40px;
+			margin-right: 40px;
 		}
 
 		.izquierda 
@@ -84,14 +115,14 @@
      			display: flex;
       			flex-direction: column;
       			align-items: flex-start;
-      			gap: 80px;
+      			gap: 5px;
 			color: #FFFFFF;
 			
     		}
 		
 		.subrayar
 		{
-			
+			color: #000000;
 		}
 
 		.subrayar:hover
@@ -105,23 +136,74 @@
 			flex-direction: column;
 			align-items: center;
 			color: #FFFFFF;
-			gap: 20px;
+			gap: 5px;
+			padding: 15px 20px;
 		}
+		.imagenes_pequenias
+		{
+			
+		}
+		
+		nav a:hover 
+		{
+      			background-color: #8D8D8D;
+      			color: #e0e0e0;
+    		}
 		
 		a
 		{
 			text-decoration: none;
 		}
 
+		html 
+		{
+      			scroll-behavior: smooth;
+    		}
+		
+		div
+		{	
+			gap: 5px
+		}
 		body
 		{
 			background-color: #F5F5F5;
 		}
 
+		nav 
+		{
+      			margin: 20px;
+      			text-align: center;
+    		}
+    		
+		section 
+		{
+      			margin-bottom: 20px;
+      			padding: 20px;
+    		}
+	
+		nav a 
+		{
+      			display: inline-block;
+      			padding: 10px 20px;
+			width: 250px;
+      			margin: 10px;
+      			background-color: #000000;
+      			color: white;
+      			text-decoration: none;
+      			border-radius: 20px;
+      			font-size: 36px;
+      			transition: background-color 0.3s, color 0.3s;
+    		}
+
 		h1
 		{
 			font-family: Georgia;
-			font-size: 50px;
+			font-size: 60px;
+		}
+		h3
+		{
+			font-family: Georgia;
+			font-size: 120px;
 		}
 
 		h2
@@ -140,6 +222,7 @@
 		{
 			font-family: Comic Sans MS;
             		font-size: 25px;
+			color: #000000;
 		}
 
 
@@ -149,115 +232,180 @@
 <body>
 	 
 	<div class="bloque_arriba">
-		<div class="bloque_letras_arriba">
+		<div class="bloque_arriba_imagen">
 			<a href="https://ucsp.edu.pe">
-				<h4 class="mover_ambos_lados30">UCSP - Arequipa</h4>
+				<img src="imagenes/UCSP_logo_bn.png" alt="UCSP" width="auto" height="75" />
 			</a>
 		</div>
+		<div class="bloque_arriba_letras">
+			<div class="bloque_letras_arriba">
+				<a href="https://issuu.com/ucsp/docs/malla-curricular-ciencia-de-la-computacion">
+					<h4 class="mover_ambos_lados40">Malla Curricular</h4>
+				</a>
+			</div>
+			<div class="bloque_letras_arriba">
+				<a href="https://cs.ucsp.edu.pe">
+					<h4 class="mover_ambos_lados40">Carrera</h4>
+				</a>
+			</div>
+			<div class="bloque_letras_arriba">
+				<a href="https://ucsp.edu.pe">
+					<h4 class="mover_ambos_lados40">UCSP - Arequipa</h4>
+				</a>
+			</div>
+		</div>
+		
 	</div>
 	<br>
-	<h1 class="centrar_medio">Trabajo 1 - P&aacute;gina en html</h1>
-	<br>
-
-	<div class="bloque_separado">
-		<h1>Datos</h1>
-	</div>
-
-	<h2 class="mover_derecha75">Estudiante:</h2>
-	<p class="mover_derecha140">Jos&eacute; Daniel Bernedo Coya</p>
-	<br>
-
-	<h2 class="mover_derecha75">Carrera Profesional:</h2>
-	<p class="mover_derecha140">Ciencia de la Computaci&oacute;n</p>
+	<h3 class="centrar_medio">Jos&eacute; Daniel Bernedo Coya</h1>
 	<br>
 	
-	<h2 class="mover_derecha75">Centro de Estudios:</h2>
-	<p class="mover_derecha140">Universidad Cat&oacute;lica San Pablo - UCSP</p>
-	<br>
-
-	<div class="bloque_separado">
-		<h1>Cursos</h1>
-	</div>
+	<nav>
+    		<a href="#seccion-1">Datos</a>
+    		<a href="#seccion-2">Cursos</a>
+    		<a href="#seccion-3">Compa&ntilde;eros</a>
+  	</nav>
 	
-	<h2 class="mover_derecha75">Cursos que he cursado:</h2>
-	<p class="mover_derecha140">1.   Programaci&oacute;n de Videojuegos</p>
-	<p class="mover_derecha140">2.   Estructuras Discretas I</p>
-	<p class="mover_derecha140">3.   Matem&aacute;tica I</p>
-	<p class="mover_derecha140">4.   Comunicaci&oacute;n I</p>
-	<p class="mover_derecha140">5.   Introducci&oacute;n a la vida universitaria (IVU)</p>
-	<p class="mover_derecha140">6.   Metodolog&iacute;a del Estudio</p>
-	<br>
+
+
+
+
+	<section id="seccion-1">
+
+		<div class="bloque_separado">
+			<h1>Datos</h1>
+		</div>
+
+		<h2 class="mover_derecha75">Estudiante:</h2>
+		<p class="mover_derecha140">Jos&eacute; Daniel Bernedo Coya</p>
+		<br>
+
+		<h2 class="mover_derecha75">Curso:</h2>
+		<p class="mover_derecha140">Introducci&oacute;n a la ciencia de la computaci&oacute;n</p>
+		<br>
 	
-	<h2 class="mover_derecha75">Cursos que estoy cursando:</h2>
-	<p class="mover_derecha140">1.   Ciencia de la Computaci&oacute;n I</p>
-	<p class="mover_derecha140">2.   Estructuras Discretas II</p>
-	<p class="mover_derecha140">3.   Matem&aacute;tica II</p>
-	<p class="mover_derecha140">4.   Persona, Matrimonio y Familia</p>
-	<p class="mover_derecha140">5.   Introducci&oacute;n a la Filosof&iacute;a</p>
-	<p class="mover_derecha140">6.   Introducci&oacute;n a la ciencia de la computaci&oacute;n</p>
-	<br>
+		<h2 class="mover_derecha75">Carrera Profesional:</h2>
+		<p class="mover_derecha140">Ciencia de la Computaci&oacute;n</p>
+		<br>
+	
+		<h2 class="mover_derecha75">Centro de Estudios:</h2>
+		<p class="mover_derecha140">Universidad Cat&oacute;lica San Pablo - UCSP</p>
+		<br>
 
-	<div class="bloque_separado">
-		<h1>Compa&ntilde;eros</h1>
-	</div>
+		<h2 class="mover_derecha75">Ciclo:</h2>
+		<p class="mover_derecha140">Segundo Semestre</p>
+		<br>
+	
+		<h2 class="mover_derecha75">Lugar:</h2>
+		<p class="mover_derecha140">Arequipa - Per&uacute;</p>
+		<br>
 
-	<h2 class="mover_derecha75">Compa&ntilde;ero 1:</h2>
-	<p>
-		<span class="mover_derecha140">Nombre</span>
-		<br>
-		<span class="mover_derecha140">GitHub:</span>
-		<a href="https://www.w3schools.com">Ver mediante GitHub</a>
-		<br>
-		<span class="mover_derecha140">GitHub:</span>
-		<a href="https://www.w3schools.com">Ver mediante GitHub</a>
-	</p>
-	<br>
+	</section>
 
-	<h2 class="mover_derecha75">Compa&ntilde;ero 2:</h2>
-	<p>
-		<span class="mover_derecha140">Nombre</span>
-		<br>
-		<span class="mover_derecha140">GitHub:</span>
-		<a href="https://www.w3schools.com">Ver mediante GitHub</a>
-		<br>
-		<span class="mover_derecha140">GitHub:</span>
-		<a href="https://www.w3schools.com">Ver mediante GitHub</a>
-	</p>
-	<br>
+	<section id="seccion-2">
 
-	<h2 class="mover_derecha75">Compa&ntilde;ero 3:</h2>
-	<p>
-		<span class="mover_derecha140">Nombre</span>
+		<div class="bloque_separado">
+			<h1>Cursos</h1>
+		</div>
+	
+		<h2 class="mover_derecha75">Cursos que he cursado:</h2>
+		<p class="mover_derecha140">1.   Programaci&oacute;n de Videojuegos</p>
+		<p class="mover_derecha140">2.   Estructuras Discretas I</p>
+		<p class="mover_derecha140">3.   Matem&aacute;tica I</p>
+		<p class="mover_derecha140">4.   Comunicaci&oacute;n I</p>
+		<p class="mover_derecha140">5.   Introducci&oacute;n a la vida universitaria (IVU)</p>
+		<p class="mover_derecha140">6.   Metodolog&iacute;a del Estudio</p>
 		<br>
-		<span class="mover_derecha140">GitHub:</span>
-		<a href="https://www.w3schools.com">Ver mediante GitHub</a>
+	
+		<h2 class="mover_derecha75">Cursos que estoy cursando:</h2>
+		<p class="mover_derecha140">1.   Ciencia de la Computaci&oacute;n I</p>
+		<p class="mover_derecha140">2.   Estructuras Discretas II</p>
+		<p class="mover_derecha140">3.   Matem&aacute;tica II</p>
+		<p class="mover_derecha140">4.   Persona, Matrimonio y Familia</p>
+		<p class="mover_derecha140">5.   Introducci&oacute;n a la Filosof&iacute;a</p>
+		<p class="mover_derecha140">6.   Introducci&oacute;n a la ciencia de la computaci&oacute;n</p>
 		<br>
-		<span class="mover_derecha140">GitHub:</span>
-		<a href="https://www.w3schools.com">Ver mediante GitHub</a>
-	</p>
+	
+	</section>
+
+	<section id="seccion-3">
+	
+		<div class="bloque_separado">
+			<h1>Compa&ntilde;eros</h1>
+		</div>
+
+		<h2 class="mover_derecha75">Fabian Marcelo Ort&iacute;z Molina</h2>
+			<div class="subrayar">
+				<a href="https://fabian0rtiz.github.io/Fabian-Marcelo-Ortiz-Molina">
+       					<p class="mover_derecha140">P&aacute;gina</p>
+      				</a>
+			</div>
+			<div class="subrayar">
+				<a href="https://mail.google.com/mail">
+       					<p class="mover_derecha140">LinkedIn</p>
+      				</a>
+			</div>
+		<br>
+
+		<h2 class="mover_derecha75">Eduardo Sebast&iacute;an Mendoza Maque</h2>
+			<div class="subrayar">
+				<a href="https://fabian0rtiz.github.io/Fabian-Marcelo-Ortiz-Molina">
+       					<p class="mover_derecha140">P&aacute;gina</p>
+      				</a>
+			</div>
+			<div class="subrayar">
+				<a href="https://pe.linkedin.com/in/eduardo-sebastian-mendoza-maque-a06121326">
+       					<p class="mover_derecha140">LinkedIn</p>
+      				</a>
+			</div>
+		<br>
+
+		<h2 class="mover_derecha75">Luciana Milagros Farf&aacute;n Begazo</h2>
+			<div class="subrayar">
+				<a href="https://lucianamfb.github.io/LucianaMilagrosFarfanBegazo">
+       					<p class="mover_derecha140">P&aacute;gina</p>
+      				</a>
+			</div>
+			<div class="subrayar">
+				<a href="https://www.linkedin.com/in/luciana-farfan-begazo-ab4260328">
+       					<p class="mover_derecha140">LinkedIn</p>
+      				</a>
+			</div>
+	
+	</section>
 	<br>
 	<br>
 	<br>
 	
 	<div class="bloque_abajo">
     		<div class="izquierda">
-      			<div class="subrayar">
-				<a href="https://cs.ucsp.edu.pe/">
-       					<h4>Carrera</h4>
-      				</a>
-			</div>
-      			<div class="subrayar">
-				<a href="https://issuu.com/ucsp/docs/malla-curricular-ciencia-de-la-computacion">
-        				<h4>Malla Curricular</h4>
-      				</a>
-			</div>
+      			<h4>Contactos:</h4>
+			<h4>jose.bernedo.coya@ucsp.edu.pe</h4>
+			
+      			<a href="https://github.com/JosDan412">
+				<img src="imagenes/github.png" alt="GitHub" width="auto" height="63" />
+			</a>
+			<a href="https://pe.linkedin.com/in/jdanielbcy">
+				<img src="imagenes/linkendin2.webp" alt="Linkendin2" width="auto" height="35" />
+			</a>
     	</div>
     		<div class="derecha">
-      			<div class="subrayar">
-				<a href="https://pe.linkedin.com/in/ecuadrosv">
-        				<h4>Profesor</h4>
+      			<h4>Profesor</h4>
+			<img src="imagenes/ft_prof_ecuadros.jpg" alt="ecuadros" width="auto" height="150" />
+			<div>
+        			<a href="https://pe.linkedin.com/in/ecuadrosv">
+					<img src="imagenes/linkendin.png" alt="Linkendin" width="auto" height="59" />
+				</a>
+        			<a href="https://ecuadros.blogspot.com">
+					<img src="imagenes/blog.png" alt="Blog" width="auto" height="55" />
+				</a>
+				<a href="https://issuu.com/ucsp/docs/malla-curricular-ciencia-de-la-computacion">
+        				<img src="imagenes/X.webp" alt="X" width="auto" height="64" />
      				</a>
 			</div>
+
+        		<h4>Ernesto Cuadros Vargas</h4>
+
 
     		</div>
 	</div>
